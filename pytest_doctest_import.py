@@ -73,9 +73,6 @@ def import_option(name, namespace, from_operator='<', as_operator='@'):
         from_operator (str): the operator to use for the "from" syntax.
         as_operator (str): the operator to use for the "as" syntax.
     """
-    as_name = None
-    fromlist = None
-
     extracts, name = rsplit_exact(name, from_operator, 1, '')
     extracts = [split_exact(f, as_operator, 1) for f in extracts.split(',') if f]
     fromlist = [f[0] for f in extracts] or None

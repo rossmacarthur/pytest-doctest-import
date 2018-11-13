@@ -1,7 +1,7 @@
 import six
 import sys
 
-# This is hack so pytest-cov works correctly.
+# This is a hack so pytest-cov works correctly.
 del sys.modules['pytest_doctest_import']  # noqa: E402
 
 from pytest_doctest_import import pad, rpad, split_exact, rsplit_exact, import_option
