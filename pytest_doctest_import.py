@@ -1,7 +1,7 @@
 import pytest
 
 
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 def pad(l, until=0, fillvalue=None):
