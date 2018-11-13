@@ -12,7 +12,7 @@ matrix:
 
 # command to install dependencies
 install:
-  - pip install ".[linting,testing]"
+  - pip install -e ".[linting,testing]"
   - pip install codecov
 
 # command to run tests

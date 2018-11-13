@@ -28,7 +28,7 @@ def split_exact(s, sep=None, split=0, fillvalue=None):
     """
     Split a string an exact amount of times.
     """
-    return rpad(s.split(sep=sep, maxsplit=split), split + 1, fillvalue=fillvalue)
+    return rpad(s.split(sep, split), split + 1, fillvalue=fillvalue)
 
 
 def rsplit_exact(s, sep=None, split=0, fillvalue=None):
@@ -37,7 +37,7 @@ def rsplit_exact(s, sep=None, split=0, fillvalue=None):
 
     Splits are done starting at the end of the string and working to the front.
     """
-    return pad(s.rsplit(sep=sep, maxsplit=split), split + 1, fillvalue=fillvalue)
+    return pad(s.rsplit(sep, split), split + 1, fillvalue=fillvalue)
 
 
 def import_option(name, namespace, from_operator='<', as_operator='@'):
