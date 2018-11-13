@@ -32,7 +32,7 @@ url = 'https://github.com/rossmacarthur/pytest-doctest-import'
 long_description = read('README.rst')
 
 install_requirements = [
-    'pytest>=3.5.0'
+    'pytest>=3.3.0'
 ]
 
 lint_requirements = [
