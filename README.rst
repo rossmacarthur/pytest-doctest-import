@@ -5,7 +5,7 @@ pytest-doctest-import
     :target: https://pypi.org/project/pytest-doctest-import/
     :alt: PyPI Version
 
-.. image:: https://img.shields.io/travis/rossmacarthur/pytest-doctest-import.svg?style=flat-square
+.. image:: https://img.shields.io/travis/rossmacarthur/pytest-doctest-import/master.svg?style=flat-square
     :target: https://travis-ci.org/rossmacarthur/pytest-doctest-import
     :alt: Build Status
 
