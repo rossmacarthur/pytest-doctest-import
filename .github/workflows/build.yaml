@@ -1,0 +1,31 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test on Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [2.7, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: extractions/setup-just@v1
+
+    - uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: pip install -e ".[linting,testing]"
+
+    - name: Lint
+      run: flake8 --max-complexity 10 .
+
+    - name: Test
+      run: pytest -xvv --cov=pytest_doctest_import --cov-report term-missing --cov-fail-under 95 --doctest-modules --doctest-import "*<types"
+
+    - uses: codecov/codecov-action@v1

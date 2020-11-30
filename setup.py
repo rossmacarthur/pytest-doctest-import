@@ -36,13 +36,14 @@ install_requirements = [
 ]
 
 lint_requirements = [
-    'flake8',
+    'flake8<3.8.0',
     'flake8-quotes',
     'pep8-naming'
 ]
 
 test_requirements = [
-    'pytest-cov'
+    'pytest-cov',
+    'six'
 ]
 
 setup(
